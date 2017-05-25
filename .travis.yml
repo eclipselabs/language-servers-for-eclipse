@@ -1,0 +1,37 @@
+########################################################################
+# Copyright (c) 2017 Rogue Wave Software Inc. and others.
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Eclipse Public License v1.0
+# which accompanies this distribution, and is available at
+# http://www.eclipse.org/legal/epl-v10.html
+#
+# Contributors:
+#   Rogue Wave Software Inc. - initial implementation
+########################################################################
+
+language: java
+
+jdk: oraclejdk8
+
+cache:
+  directories:
+  - $HOME/.m2
+  - $HOME/.composer/cache
+
+before_install:	
+#  - sudo add-apt-repository ppa:ondrej/php -y
+#  - sudo apt-get -qq update
+#  - sudo apt-get install -y php7.0-cli php7.0-xml
+#  - curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+
+install: true
+
+script: mvn clean verify
+
+after_success:
+  # Upload the repository to the snapshot update site on Bintray
+  # 1. Delete the snapshot version
+  # - curl -X DELETE -ukaloyan-raev:$BINTRAY_KEY https://api.bintray.com/packages/kaloyan-raev/lsp4e-php/update-site/versions/snapshot
+  # 2. Upload the repository.zip to a new version with name "snapshot", unzip it and publish it
+  # - curl -T org.eclipse.lsp4e.php-repository/target/repository.zip -ukaloyan-raev:$BINTRAY_KEY "https://api.bintray.com/content/kaloyan-raev/lsp4e-php/update-site/snapshot/snapshot/repository.zip?publish=1&explode=1"
+

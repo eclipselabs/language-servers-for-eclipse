@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="tm-feature" version="0.0.0">
+      <category name="dep"/>
+   </feature>
+   <bundle id="org.eclipse.lsp4e" version="0.0.0">
+      <category name="dep"/>
+   </bundle>
+   <bundle id="org.eclipse.lsp4j" version="0.0.0">
+      <category name="dep"/>
+   </bundle>
+   <bundle id="org.eclipse.lsp4j.jsonrpc" version="0.0.0">
+      <category name="dep"/>
+   </bundle>
+   <bundle id="org.eclipse.ui.genericeditor" version="0.0.0">
+      <category name="dep"/>
+   </bundle>
+   <bundle id="com.google.gson" version="0.0.0">
+      <category name="dep"/>
+   </bundle>
+   <bundle id="org.eclipse.xtext.xbase.lib" version="0.0.0">
+      <category name="dep"/>
+   </bundle>
+   <bundle id="org.jcodings" version="0.0.0">
+      <category name="dep"/>
+   </bundle>
+   <bundle id="org.joni" version="0.0.0">
+      <category name="dep"/>
+   </bundle>
+   <bundle id="org.eclipse.lsp4e.python" version="0.0.0">
+      <category name="lsp4e-languages"/>
+   </bundle>
+   <bundle id="org.eclipse.lsp4e.php" version="0.0.0">
+      <category name="lsp4e-languages"/>
+   </bundle>
+   <bundle id="org.eclipse.lsp4e.java" version="0.0.0">
+      <category name="lsp4e-languages"/>
+   </bundle>   
+   <bundle id="org.eclipse.acute" version="0.0.0">
+      <category name="lsp4e-languages"/>
+   </bundle>
+   <feature id="org.eclipse.bluesky.feature" version="0.0.0">
+      <category name="lsp4e-languages"/>
+   </feature>
+   <category-def name="lsp4e-languages" label="Languages">
+      <description>
+         Integrates the several language servers.
+      </description>
+   </category-def>
+   <category-def name="dep" label="Dependencies">
+      <description>
+         Required dependencies.
+      </description>
+   </category-def>
+</site>
