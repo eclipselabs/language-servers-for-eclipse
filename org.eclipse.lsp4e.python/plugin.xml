@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.core.contenttype.contentTypes">
+      <content-type
+            base-type="org.eclipse.core.runtime.text"
+            file-extensions="py"
+            id="org.eclipse.lsp4e.python"
+            name="Python"
+            priority="normal">
+      </content-type>
+   </extension>
+   <extension
+         point="org.eclipse.lsp4e.languageServer">
+      <server
+            class="org.eclipse.lsp4e.python.PythonLanguageServer"
+            id="com.eclipse.lsp4e.python.server"
+            label="Python Language Server">
+      </server>
+      <contentTypeMapping
+            contentType="org.eclipse.lsp4e.python"
+            id="com.eclipse.lsp4e.python.server">
+      </contentTypeMapping>
+   </extension>
+   <extension
+         point="org.eclipse.ui.genericeditor.presentationReconcilers">
+      <presentationReconciler
+            class="org.eclipse.tm4e.ui.text.TMPresentationReconciler"
+            contentType="org.eclipse.lsp4e.python">
+      </presentationReconciler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editorContentTypeBinding
+            contentTypeId="org.eclipse.lsp4e.python"
+            editorId="org.eclipse.ui.genericeditor.GenericEditor">
+      </editorContentTypeBinding>
+   </extension>
+   <extension
+         point="org.eclipse.tm4e.registry.grammars">
+      <grammar
+            path="syntaxes/Python.tmLanguage"
+            scopeName="source.python">
+      </grammar>
+      <scopeNameContentTypeBinding
+            contentTypeId="org.eclipse.lsp4e.python"
+            scopeName="source.python">
+      </scopeNameContentTypeBinding>
+   </extension>
+
+</plugin>
