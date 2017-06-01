@@ -10,7 +10,7 @@
 ########################################################################
 
 language: java
-
+php: '7.1'
 jdk: oraclejdk8
 
 cache:
@@ -20,8 +20,8 @@ cache:
 
 before_install:	
 # - sudo add-apt-repository ppa:ondrej/php -y
-  - sudo apt-get -qq update
-  - sudo apt-get install -y php7.0-cli php7.0-xml
+#  - sudo apt-get -qq update
+# - sudo apt-get install -y php7.0-cli php7.0-xml
   - curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 
 install: true
