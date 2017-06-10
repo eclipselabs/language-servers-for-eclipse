@@ -175,7 +175,7 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
    </plugins>
 
    <features>
-      <feature id="org.eclipse.platform" version="4.7.0.v20170512-0500"/>
+      <feature id="org.eclipse.platform"/>
       <feature id="org.eclipse.lsp4e.languages.ide.feature"/>
       <feature id="tm-feature"/>
       <feature id="org.eclipse.bluesky.feature"/>

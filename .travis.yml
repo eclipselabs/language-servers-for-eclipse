@@ -11,7 +11,10 @@
 
 dist: trusty
 
-language: java
+language: php
+
+php:
+  - '7.0'
 
 jdk: oraclejdk8
 
