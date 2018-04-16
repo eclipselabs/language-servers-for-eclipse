@@ -68,6 +68,11 @@ public class PHPLanguageServer implements StreamConnectionProvider {
 	}
 
 	@Override
+	public InputStream getErrorStream() {
+		return provider.getErrorStream();
+	}
+	
+	@Override
 	public void stop() {
 		provider.stop();
 	}
